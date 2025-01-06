@@ -1,0 +1,27 @@
+Client: Docker Engine - Community
+ Version:           27.2.0
+ API version:       1.47
+ Go version:        go1.21.13
+ Git commit:        3ab4256
+ Built:             Tue Aug 27 14:15:15 2024
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          27.2.0
+  API version:      1.47 (minimum version 1.24)
+  Go version:       go1.21.13
+  Git commit:       3ab5c7d
+  Built:            Tue Aug 27 14:15:15 2024
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.7.22
+  GitCommit:        7f7fdf5fed64eb6a7caf99b3e12efcf9d60e311c
+ runc:
+  Version:          1.1.14
+  GitCommit:        v1.1.14-0-g2c9f560
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
