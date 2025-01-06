@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package grpcservice;
+
+service Table {
+  rpc ColSum (ColSumReq) returns (ColSumResp);
+  rpc Upload (UploadReq) returns (UploadResp);
+}
+
+message ColSumReq {
+  string column = 1;
+  string format = 2;
+}
+
+message ColSumResp {
+  int64 total = 1;
+  string error = 2;
+}
+
+message UploadReq {
+  bytes csv_data = 1;
+}
+
+message UploadResp {
+  string error = 1;
+}
