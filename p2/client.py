@@ -20,74 +20,65 @@ class LRUCache:
         self.capacity = capacity
         self.cache = OrderedDict()
 
-    def get(self, key):
-        if key not in self.cache:
+    def get(self, k):
+        if k not in self.cache:
             return None
-        self.cache.move_to_end(key)
-        return self.cache[key]
+        self.cache.move_to_end(k)
+        return self.cache[k]
 
-    def put(self, key, value):
-        if key in self.cache:
-            self.cache.move_to_end(key)
-        self.cache[key] = value
+    def put(self, k, v):
+        if k in self.cache:
+            self.cache.move_to_end(k)
+        self.cache[k] = v
         if len(self.cache) > self.capacity:
             self.cache.popitem(last=False)
-
-
 
 def get_match_count(stub, winning_team, country):
     request = GetMatchCountReq(winning_team=winning_team, country=country)
     response = stub.GetMatchCount(request)
     return response.num_matches
 
-
 def main():
     if len(sys.argv) != 4:
         print("Usage: python client.py <SERVER_0> <SERVER_1> <INPUT_FILE>")
         sys.exit(1)
 
-    server_0, server_1, input_file = sys.argv[1], sys.argv[2], sys.argv[3]
-
-    channel_0 = grpc.insecure_channel(server_0)
-    channel_1 = grpc.insecure_channel(server_1)
-    stub_0 = MatchCountStub(channel_0)
-    stub_1 = MatchCountStub(channel_1)
-
-    cache = LRUCache(10)
-
-    df = pd.read_csv(input_file)
-
-    for _, row in df.iterrows():
+    server_0, server_1, input_file = sys.argv[1:4]
+    c0 = grpc.insecure_channel(server_0)
+    c1 = grpc.insecure_channel(server_1)
+    end0 = MatchCountStub(c0)
+    end1 = MatchCountStub(c1)
+    lru_cache = LRUCache(10)
+    df_input = pd.read_csv(input_file)
+    
+    for _, row in df_input.iterrows():
         winning_team = row.get("winning_team", "")
         if winning_team != winning_team:
             winning_team = ""
         else:
             winning_team = str(winning_team).strip()
-
         country = row.get("country", "")
         if country != country:
             country = ""
         else:
             country = str(country).strip()
 
-        key = "{},{}".format(winning_team, country)
-        count = cache.get(key)
-
-        if count is None:
+        k = "{},{}".format(winning_team, country)
+        num = lru_cache.get(k)
+        if num is None:
             if not country:
-                count = (get_match_count(stub_0, winning_team, "") + get_match_count(stub_1, winning_team, ""))
+                num = (get_match_count(end0, winning_team, "") + get_match_count(end1, winning_team, ""))
             else:
                 if simple_hash(country) % 2 == 0:
-                    count = get_match_count(stub_0, winning_team, country)
+                    num = get_match_count(end0, winning_team, country)
                 else:
-                    count = get_match_count(stub_1, winning_team, country)
-            cache.put(key, count)
-            print(count)
+                    num = get_match_count(end1, winning_team, country)
+            lru_cache.put(k, num)
+            print(num)
         else:
-            print("{}*".format(count))
-
-    channel_0.close()
-    channel_1.close()
+            print("{}*".format(num))
+    c0.close()
+    c1.close()
 
 if __name__ == "__main__":
     main()

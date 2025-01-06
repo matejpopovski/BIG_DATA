@@ -1,0 +1,14 @@
+{
+  "score": 100,
+  "full_score": 100,
+  "tests": {
+    "docker_build": "PASS (10/10)",
+    "proto_compile": "PASS (10/10)",
+    "servers_run": "PASS (5/5)",
+    "client_runs": "PASS (5/5)",
+    "test_input_0": "PASS (10/10)",
+    "test_input_1": "PASS (20/20)",
+    "test_input_2": "PASS (20/20)",
+    "test_input_3": "PASS (20/20)"
+  }
+}

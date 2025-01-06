@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service MatchCount {
+  rpc GetMatchCount (GetMatchCountReq) returns (GetMatchCountResp) {}
+}
+
+message GetMatchCountReq {
+  string country = 1;
+  string winning_team = 2;
+}
+
+message GetMatchCountResp {
+  int32 num_matches = 1;
+}

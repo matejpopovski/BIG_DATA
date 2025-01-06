@@ -1,0 +1,4 @@
+Usage: python server.py <PATH_TO_CSV_FILE> <PORT>
+CSV Path: partitions/part_1.csv
+Port: 50052
+Server has been started on port: 50052
