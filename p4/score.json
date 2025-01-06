@@ -1,0 +1,76 @@
+{
+  "score": 0,
+  "full_score": 100,
+  "tests": {
+    "q1": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 75, in run\n    result = self.func()\n             ^^^^^^^^^^^\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 693, in q1\n    check_has_answer(1)\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 688, in check_has_answer\n    raise Exception(f\"Answer to question {num} not found\")\n",
+      "Exception: Answer to question 1 not found\n"
+    ],
+    "q2": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 75, in run\n    result = self.func()\n             ^^^^^^^^^^^\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 700, in q2\n    check_has_answer(2)\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 688, in check_has_answer\n    raise Exception(f\"Answer to question {num} not found\")\n",
+      "Exception: Answer to question 2 not found\n"
+    ],
+    "q3": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 75, in run\n    result = self.func()\n             ^^^^^^^^^^^\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 729, in q3\n    check_has_answer(3)\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 688, in check_has_answer\n    raise Exception(f\"Answer to question {num} not found\")\n",
+      "Exception: Answer to question 3 not found\n"
+    ],
+    "q4": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 75, in run\n    result = self.func()\n             ^^^^^^^^^^^\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 743, in q4\n    check_has_answer(4)\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 688, in check_has_answer\n    raise Exception(f\"Answer to question {num} not found\")\n",
+      "Exception: Answer to question 4 not found\n"
+    ],
+    "q5": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 75, in run\n    result = self.func()\n             ^^^^^^^^^^^\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 753, in q5\n    check_has_answer(5)\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 688, in check_has_answer\n    raise Exception(f\"Answer to question {num} not found\")\n",
+      "Exception: Answer to question 5 not found\n"
+    ],
+    "q6": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 75, in run\n    result = self.func()\n             ^^^^^^^^^^^\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 767, in q6\n    check_has_answer(6)\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 688, in check_has_answer\n    raise Exception(f\"Answer to question {num} not found\")\n",
+      "Exception: Answer to question 6 not found\n"
+    ],
+    "q7": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 75, in run\n    result = self.func()\n             ^^^^^^^^^^^\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 781, in q7\n    check_has_answer(7)\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 688, in check_has_answer\n    raise Exception(f\"Answer to question {num} not found\")\n",
+      "Exception: Answer to question 7 not found\n"
+    ],
+    "q8": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 75, in run\n    result = self.func()\n             ^^^^^^^^^^^\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 793, in q8\n    check_has_answer(8)\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 688, in check_has_answer\n    raise Exception(f\"Answer to question {num} not found\")\n",
+      "Exception: Answer to question 8 not found\n"
+    ],
+    "q9": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 75, in run\n    result = self.func()\n             ^^^^^^^^^^^\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 805, in q9\n    check_has_answer(9)\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 688, in check_has_answer\n    raise Exception(f\"Answer to question {num} not found\")\n",
+      "Exception: Answer to question 9 not found\n"
+    ],
+    "q10": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 75, in run\n    result = self.func()\n             ^^^^^^^^^^^\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 812, in q10\n    check_has_answer(10)\n",
+      "  File \"/home/matejpopovski/p4_jkaiman_popovski/autograde.py\", line 688, in check_has_answer\n    raise Exception(f\"Answer to question {num} not found\")\n",
+      "Exception: Answer to question 10 not found\n"
+    ]
+  }
+}
